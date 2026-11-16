@@ -16,12 +16,12 @@ import {
 import "../styles/footer.css";
 
 const quickLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "Our Services", href: "#services" },
-  { name: "Our Industries", href: "#industries" },
-  { name: "Our Projects", href: "#projects" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Our Services", href: "/#services" },
+  { name: "Our Industries", href: "/#industries" },
+  { name: "Our Projects", href: "/#projects" },
+  { name: "Contact Us", href: "/#contact" },
 ];
 
 const services = [
@@ -43,7 +43,7 @@ function Footer() {
 
           {/* Company Information */}
           <div className="footer-brand">
-            <a href="#home" className="footer-logo">
+            <a href="/" className="footer-logo">
               <span className="footer-logo-mark">Z</span>
 
               <span className="footer-logo-text">

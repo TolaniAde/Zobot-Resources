@@ -4,12 +4,14 @@ import { Menu, X, Phone } from "lucide-react";
 import "../styles/navbar.css";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "Our Services", href: "#services" },
-  { name: "Our Industries", href: "#industries" },
-  { name: "Our Projects", href: "#projects" },
-  { name: "Contact Us", href: "#contact" },
+
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Our Services", href: "/services" },
+  { name: "Our Industries", href: "/industries" },
+  { name: "Our Projects", href: "/#projects" },
+  { name: "Contact Us", href: "/contact" },
+
 ];
 
 function Navbar() {
@@ -18,7 +20,7 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="container navbar-container">
-        <a href="#home" className="navbar-logo">
+        <a href="/" className="navbar-logo">
           <span className="logo-mark">Z</span>
           <span className="logo-text">
             <strong>ZOBOT</strong>
