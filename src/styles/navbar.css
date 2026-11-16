@@ -1,0 +1,173 @@
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  height: 88px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+}
+
+.logo-mark {
+  width: 45px;
+  height: 45px;
+  background: var(--primary);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: 800;
+  border-radius: 5px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-text strong {
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+
+.logo-text small {
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav-links a {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.navbar-contact {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--accent);
+  color: var(--primary);
+  padding: 14px 19px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.navbar-contact:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.nav-mobile-call,
+.menu-toggle {
+  display: none;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .navbar-contact {
+    padding: 12px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .navbar {
+    height: 75px;
+  }
+
+  .navbar-contact {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--primary);
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    padding: 25px 5%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .nav-mobile-call {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary) !important;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 550px) {
+  .logo-mark {
+    width: 39px;
+    height: 39px;
+    font-size: 24px;
+  }
+
+  .logo-text strong {
+    font-size: 20px;
+  }
+}
