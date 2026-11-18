@@ -5,6 +5,7 @@ import {
   MapPin,
   Phone,
   Mail,
+  Globe,
 } from "lucide-react";
 
 import {
@@ -36,26 +37,23 @@ const services = [
 
 function Footer() {
   return (
-    <footer className="footer">
-
+    <footer className="footer" id="footer">
       <div className="footer-main">
         <div className="container footer-grid">
 
-          {/* Company Information */}
+          {/* Company Brand */}
           <div className="footer-brand">
             <a href="/" className="footer-logo">
-              <span className="footer-logo-mark">Z</span>
-
-              <span className="footer-logo-text">
-                <strong>ZOBOT</strong>
-                <small>RESOURCES LIMITED</small>
-              </span>
+              <img
+                src="/images/zobot-logo.png"
+                alt="Zobot Resources Limited"
+              />
             </a>
 
-            <p>
-              Zobot Resources Limited is an indigenous Nigerian
-              company delivering solutions across energy,
-              engineering and infrastructure.
+            <p className="footer-description">
+              Delivering reliable solutions across energy,
+              engineering and infrastructure through innovation,
+              technical expertise and excellence.
             </p>
 
             <p className="footer-slogan">
@@ -69,7 +67,7 @@ function Footer() {
                 rel="noreferrer"
                 aria-label="Facebook"
               >
-                <FaFacebookF size={17} />
+                <FaFacebookF />
               </a>
 
               <a
@@ -78,7 +76,7 @@ function Footer() {
                 rel="noreferrer"
                 aria-label="LinkedIn"
               >
-                <FaLinkedinIn size={17} />
+                <FaLinkedinIn />
               </a>
 
               <a
@@ -87,21 +85,21 @@ function Footer() {
                 rel="noreferrer"
                 aria-label="Instagram"
               >
-                <FaInstagram size={17} />
+                <FaInstagram />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="footer-column">
-            <h3>Quick Links</h3>
+            <h3>Explore</h3>
 
             <ul>
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a href={link.href}>
                     <ArrowUpRight size={14} />
-                    {link.name}
+                    <span>{link.name}</span>
                   </a>
                 </li>
               ))}
@@ -115,9 +113,9 @@ function Footer() {
             <ul>
               {services.map((service) => (
                 <li key={service}>
-                  <a href="#services">
+                  <a href="/#services">
                     <ArrowUpRight size={14} />
-                    {service}
+                    <span>{service}</span>
                   </a>
                 </li>
               ))}
@@ -126,7 +124,11 @@ function Footer() {
 
           {/* Contact Information */}
           <div className="footer-column footer-contact">
-            <h3>Contact Information</h3>
+            <h3>Get in Touch</h3>
+
+            <p className="footer-contact-intro">
+              Have a project or enquiry? Our team is ready to hear from you.
+            </p>
 
             <div className="footer-contact-item">
               <MapPin size={19} />
@@ -155,7 +157,7 @@ function Footer() {
               </a>
             </div>
 
-            <a href="#contact" className="footer-contact-button">
+            <a href="/#contact" className="footer-contact-button">
               Send an Enquiry
               <ArrowUpRight size={17} />
             </a>
@@ -164,22 +166,39 @@ function Footer() {
         </div>
       </div>
 
-      {/* Copyright Section */}
+      {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
 
-          <p>
-            © 2026 Zobot Resources Limited. All Rights Reserved.
+          <p className="footer-copyright">
+            © {new Date().getFullYear()} Zobot Resources Limited.
+            All Rights Reserved.
           </p>
 
           <a href="#home" className="back-to-top">
             Back to Top
-            <ArrowUp size={16} />
+            <span>
+              <ArrowUp size={15} />
+            </span>
           </a>
 
         </div>
-      </div>
 
+        <div className="container footer-credit">
+          <span>Website Design & Development by</span>
+
+          <a
+            href="https://tolani-portfolio-seven.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit Tolani A's portfolio"
+          >
+            <Globe size={13} />
+            Tolani A.
+            <ArrowUpRight size={13} />
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }
